@@ -25,7 +25,7 @@ git clone https://github.com/donxav/cli_todolist.git
 
 Move into the directory:
 
-cd todo-list-cli
+cd cli_todolist
 
 Run:
 
