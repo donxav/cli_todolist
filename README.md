@@ -21,12 +21,18 @@ A simple command-line To-Do List application built using Python.
 
 Clone the repository:
 
-git clone https://github.com/donxav/cli_todolist.git
+``` bash
+git clone  https://github.com/donxav/cli_todolist.git
+```
 
 Move into the directory:
 
+```bash
 cd cli_todolist
+```
 
 Run:
 
+``` bash
 python main.py
+```
