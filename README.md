@@ -34,5 +34,5 @@ cd cli_todolist
 Run:
 
 ``` bash
-python main.py
+python3 main.py
 ```
