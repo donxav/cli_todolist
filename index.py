@@ -18,7 +18,7 @@ def main():
             print("I can only understand numbers here. Please enter an integer.")
             continue
         if choice==1:
-            task=input("Enter your task:\t").strip()
+            task=empty_check_input("Enter your task:\t")
             add(tasks,task)
         elif choice==2:
             view(tasks)
@@ -32,7 +32,15 @@ def main():
             continue
         
 
-#here I am using a fuction to add to the list ,I am using it to be fancy but you could just use append in the if itself
+#v2 upgrade checking for empty entry in input of tasks
+def empty_check_input(prompt):
+    while True:
+        task=input(prompt).strip()
+        if task:
+            return task
+        print("Enter a valid task")
+
+#here I am using a fuction to add to the list ,I am using it to be fancy but you could just use append in the if itself, yeah but this is better as now I could add other functionalitieslike i could check for empty entry
 def add (chosen_list,tasktobe):
     chosen_list.append(tasktobe)
     print("Yohoo!! I just added your stuff to the list")
