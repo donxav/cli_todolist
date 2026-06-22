@@ -6,7 +6,7 @@ A simple command-line To-Do List application built using Python.
 
 - Add tasks
 - View tasks
-- Remove tasks
+- Remove tasks using the Task Number
 - Input validation using try-except
 
 ## Concepts Practiced
@@ -34,5 +34,5 @@ cd cli_todolist
 Run:
 
 ``` bash
-python3 main.py
+python3 index.py
 ```
