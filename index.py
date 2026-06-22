@@ -23,8 +23,7 @@ def main():
         elif choice==2:
             view(tasks)
         elif choice==3:
-            task=input("Enter the task to remove from the To-Do List:\t")
-            remove(tasks,task)
+            remove_from(tasks)
         elif choice==4:
             break
         else:
@@ -55,16 +54,25 @@ def view(chosen_list):
         for i in range(len(chosen_list)):
          print(i+1,chosen_list[i])
 
-def remove(chosen_list,chosen_task):
-    if chosen_task in chosen_list:
-         choice=input(f"Are you sure you Want to remove {chosen_task}:\t")
-         if choice.strip().lower()=="yes":
-            chosen_list.remove(chosen_task)
-         elif choice.strip().lower()=="no":
+def remove_from(chosen_list):
+    try:
+        chosen_task=int(input("Enter the number of Task to be removed:\t"))
+    except ValueError:
+        print("I can only understand numbers here. Please enter an integer.")
+        return
+    
+    if 1 <= chosen_task <= len(chosen_list):
+        choice=input(f"Are you sure you Want to remove {chosen_list[chosen_task-1]}:\t")
+        if choice.strip().lower()=="yes":
+            chosen_list.pop(chosen_task-1)
+        elif choice.strip().lower()=="no":
             return
-         else:
+        else:
             print(" Yes/No Question !!")
             return
     else:
-        print("Task not found. Check the spelling, capitalization, and spaces.")
+        print("Task not found.")
+
+
+
 main()
