@@ -7,11 +7,10 @@ def main():
     tasks = []
     print("Welcome to To-DO-List CLI!!!")
     while True:
+        functions=("Add a task","View tasks", "Remove tasks","Toggle Task","Exit")
         print("\n Please choose an option:")
-        print ("1. Add a task")
-        print ("2. View tasks")
-        print ("3. Remove tasks")
-        print ("4. Exit")
+        for i in range(len(functions)):
+            print(i+1,functions[i])
         try: #try to make sure that even if some one enter five or three intead of 5 or 3 then instead of a error 
             choice=int(input("Enter the item of your choice:\t"))
         except ValueError:
@@ -25,6 +24,9 @@ def main():
         elif choice==3:
             remove_from(tasks)
         elif choice==4:
+            print("Under Construction")
+            continue
+        elif choice==5:
             break
         else:
             print("Invalid Choice enter a number of your option")
