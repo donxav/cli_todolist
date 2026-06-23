@@ -26,8 +26,11 @@ def main():
             remove_from(tasks)
         elif choice==4:
             try: #try to make sure that even if some one enter five or three intead of 5 or 3 then instead of a error 
-                choice=int(input("Enter the item of your choice:\t"))
-                togle_task(tasks,choice)
+                task_no=int(input("Enter the number of the task to toggle:\t"))
+                if togle_task(tasks,task_no):
+                    print("Task Updated")
+                else:
+                    print("Task Not Found ,Failed to update")
             except ValueError:
              print("I can only understand numbers here. Please enter an integer.")
              continue
@@ -59,7 +62,8 @@ def view(chosen_list):
         print("No tasks found. Either you're all caught up or haven't added anything yet.")
     else:
         for i in range(len(chosen_list)):
-         print(f"{i+1}|{chosen_list[i]['task']:<15}|{chosen_list[i]['status']}")
+         status= '[x]' if  chosen_list[i]['status'] else '[ ]'
+         print(f"{i+1}|{chosen_list[i]['task']:<15}| {status}")
 
 def remove_from(chosen_list):
     try:
