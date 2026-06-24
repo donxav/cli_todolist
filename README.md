@@ -8,6 +8,7 @@ A simple command-line To-Do List application built using Python.
 - View tasks
 - Remove tasks using the Task Number
 - Input validation using try-except
+- Toggle task completion status ([x]/[ ]) using the Task Number
 
 ## Concepts Practiced
 

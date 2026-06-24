@@ -35,6 +35,7 @@ def main():
              print("I can only understand numbers here. Please enter an integer.")
              continue
         elif choice==5:
+            print("Thank You for Using the TO DO List , Tschuss")
             break
         else:
             print("Invalid Choice enter a number of your option")
